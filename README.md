@@ -3,129 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Special Celebration</title>
+    <title>Akka & Bava Wedding</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #fff5f8;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(255,192,203,0.6), rgba(255,182,193,0.6)),
+                        url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1200');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .main-title {
+            font-size: 3rem;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+        }
+
+        .details, .gallery, .message, .guest-book {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .detail-card {
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .message-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #ffb6c1;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
-    <!-- Hero Section with Countdown -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="main-title">A Beautiful Beginning</h1>
-            <p class="subtitle">A Celebration of Love & Joy</p>
-            
-            <div class="countdown-timer">
-                <div class="countdown-box">
-                    <span id="days" class="countdown-number">0</span>
-                    <p class="countdown-label">Days</p>
-                </div>
-                <div class="countdown-box">
-                    <span id="hours" class="countdown-number">0</span>
-                    <p class="countdown-label">Hours</p>
-                </div>
-                <div class="countdown-box">
-                    <span id="minutes" class="countdown-number">0</span>
-                    <p class="countdown-label">Minutes</p>
-                </div>
-                <div class="countdown-box">
-                    <span id="seconds" class="countdown-number">0</span>
-                    <p class="countdown-label">Seconds</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Wedding Details -->
-    <section class="details">
-        <div class="container">
-            <h2>Wedding Details</h2>
-            
-            <div class="details-grid">
-                <div class="detail-card">
-                    <div class="detail-icon">📅</div>
-                    <h3>Date & Time</h3>
-                    <p id="eventDate">Coming Soon</p>
-                    <input type="hidden" id="dateInput" value="2026-05-15T18:00:00">
-                </div>
-                
-                <div class="detail-card">
-                    <div class="detail-icon">📍</div>
-                    <h3>Venue</h3>
-                    <p>Grand Celebration Hall<br>Your City, Your State</p>
-                </div>
-                
-                <div class="detail-card">
-                    <div class="detail-icon">👰</div>
-                    <h3>The Bride</h3>
-                    <p>Your Sister's Name<br>A Beautiful Soul</p>
-                </div>
-                
-                <div class="detail-card">
-                    <div class="detail-icon">💍</div>
-                    <h3>The Groom</h3>
-                    <p>Groom's Name<br>A Perfect Match</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Hero -->
+<section class="hero">
+    <h1 class="main-title">My Dearest Akka ❤️</h1>
+    <p class="subtitle">A Beautiful Beginning with Bava 💍</p>
 
-    <!-- Gallery Section -->
-    <section class="gallery">
-        <div class="container">
-            <h2>Beautiful Moments</h2>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=500&h=500&fit=crop" alt="Wedding moment 1">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1552053831-71594a27c62d?w=500&h=500&fit=crop" alt="Wedding moment 2">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&h=500&fit=crop" alt="Wedding moment 3">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=500&h=500&fit=crop" alt="Wedding moment 4">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1515934751601-74f2b25a10c7?w=500&h=500&fit=crop" alt="Wedding moment 5">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1537634066038-aca1d26f2c62?w=500&h=500&fit=crop" alt="Wedding moment 6">
-                </div>
-            </div>
-        </div>
-    </section>
+    <h2>Wedding Countdown</h2>
+    <p id="countdown"></p>
+</section>
 
-    <!-- Message Section -->
-    <section class="message">
-        <div class="container">
-            <h2>Special Message</h2>
-            <div class="message-box">
-                <p>
-                    On this beautiful journey of marriage, we celebrate the love, commitment, and joy 
-                    that brings two souls together. Here's to a lifetime of happiness, laughter, and 
-                    cherished moments together.
-                </p>
-                <p style="margin-top: 20px; font-style: italic;">
-                    With love and blessings from family! 💕
-                </p>
-            </div>
-        </div>
-    </section>
+<!-- Details -->
+<section class="details">
+    <h2>Wedding Details</h2>
 
-    <!-- Guest Book Section -->
-    <section class="guest-book">
-        <div class="container">
-            <h2>Wishes & Blessings</h2>
-            <form id="wishForm">
-                <input type="text" id="guestName" placeholder="Your Name" required>
-                <textarea id="guestMessage" placeholder="Share your wishes and blessings..." rows="5" required></textarea>
-                <button type="submit" class="btn-submit">Send Wishes</button>
-            </form>
-            <div id="wishesList" class="wishes-list">
-                <!-- Wishes will appear here -->
-            </div>
-        </div>
+    <div class="detail-card">
+        <h3>📅 Date & Time</h3>
+        <p>May 3, 2026 | 6:00 PM</p>
+    </div>
+
+    <div class="detail-card">
+        <h3>📍 Venue</h3>
+        <p>Grand Celebration Hall<br>Hyderabad</p>
+    </div>
+
+    <div class="detail-card">
+        <h3>👰 Bride</h3>
+        <p>My Loving Akka 💕</p>
+    </div>
+
+    <div class="detail-card">
+        <h3>🤵 Groom</h3>
+        <p>My Dear Bava ❤️</p>
+    </div>
+</section>
+
+<!-- Message -->
+<section class="message">
+    <h2>My Wishes to You 💖</h2>
+
+    <div class="message-box">
+        <p>
+            Dear Akka & Bava,
+        </p>
+
+        <p>
+            From childhood till today, you have always been my biggest support, my guide, 
+            and my best friend, Akka. Seeing you start this beautiful new journey fills my 
+            heart with happiness.
+        </p>
+
+        <p>
+            Bava, thank you for coming into our family and taking care of my Akka with love 
+            and respect. I know you both are made for each other.
+        </p>
+
+        <p>
+            I wish you both a life full of love, laughter, success, and endless happiness. 
+            May your bond grow stronger every day and your life be filled with beautiful memories.
+        </p>
+
+        <p style="margin-top:20px;">
+            ❤️ Love you both forever ❤️<br>
+            — Your Loving Brother
+        </p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>Made with ❤️ for Akka & Bava | 2026</p>
+</footer>
+
+<!-- Countdown Script -->
+<script>
+    const weddingDate = new Date("May 3, 2026 18:00:00").getTime();
+
+    const timer = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML =
+            days + " Days " + hours + " Hours " + minutes + " Minutes " + seconds + " Seconds ";
+
+        if (distance < 0) {
+            clearInterval(timer);
+            document.getElementById("countdown").innerHTML = "Wedding Day ❤️";
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>
     </section>
 
     <!-- Footer -->
